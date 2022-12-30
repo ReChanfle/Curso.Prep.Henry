@@ -1,0 +1,83 @@
+.spanTitle
+{
+    font-size:18px;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+.spanSubTitle
+{
+    font-size:16px;
+
+
+}
+
+.box
+{
+    margin:5px;
+    padding:5px;
+    max-width: 450px;
+    background-color: beige;
+    border-radius: 5px;
+    
+
+}
+.boxInner
+{
+    margin: 10px;
+    padding:5px;
+   
+   
+    background-color: beige;
+   
+   
+    
+
+}
+body
+{
+    background-color: #FBFBEF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .one {
+    grid-column: 1 / 2;
+    grid-row: 1/8;
+  }
+  .two {
+    grid-column: 1 / 2;
+    grid-row: 2 / 8;
+  }
+  .three {
+    grid-column: 1 / 2;
+    grid-row: 4 / 8;
+  }
+  .four {
+    grid-column: 1 / 2;
+    grid-row: 5 / 8;
+  }
+  .five{
+    grid-column: 1 / 2;
+    grid-row: 6 / 8;
+  }
+  .six{
+    grid-column: 2 / 2;
+    grid-row: 3/ 8;
+  }
+  .seven{
+    grid-column: 1 / 2;
+    grid-row: 7 / 8;
+
+  }
+  .eight{
+    grid-column: 1 / 2;
+    grid-row: 8 / 8;
+
+  }
