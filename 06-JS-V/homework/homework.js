@@ -54,15 +54,16 @@ function agregarStringInvertida() {
 
   String.prototype.reverse = function(){
 
-    let temp =  this.String;
-    var string = temp.split('');
+
+    var result = '';
+
+    for(var e = this.length-1;e>=0;e--)
+      {
+          result = result+this.charAt(e);
+
+      }
     
-    var reversed = [];
-    for(var i = temp.length; i >= 0; i--) {
-      reversed.push(temp[i]);
-  }
-    var reversedStr = reversed.join('');
-    return reversedStr;
+    return result;
   }
 
     
