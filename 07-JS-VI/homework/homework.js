@@ -4,12 +4,21 @@ function mayuscula(nombre) {
   //La función recibe un nombre y debe devolver el mismo que recibe pero con su primer letra en mayúscula
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código:
-    let nombreupper = nombre[0].toUpperCase();
-    let nombrewithoutfirstletter = nombre.substr(1);
-    nombreupper = nombreupper.concat(nombrewithoutfirstletter);
-
-    return nombreupper;
-
+  var result;
+   
+    for(var e = 0;e<nombre.length;e++)
+    {
+        if(e===0)
+          {
+            result = nombre.charAt(e).toUpperCase();
+          }
+          else
+          {
+            result = result+nombre.charAt(e);
+          }
+    }
+    
+    return result;
 
 }
 
@@ -47,11 +56,9 @@ function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
   // Pista: Estarás invocando a `cb` varias veces (una por cada valor en la matriz)
   //Tu código:
+  array.forEach(cb);
 
-    for(let valores in array)
-    {
-        cb(array[valores]);
-    }
+   
 }
 
 function map(array, cb) {
@@ -59,29 +66,34 @@ function map(array, cb) {
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
-    let temp =[];
-  for(let i = 0;i<array.length;i++)
+  var newArr = [];
+
+  for(var e = 0;e<array.length;e++)
   {
-      cb(array[i]);
-      temp[i] = cb(array[i]);
+    
+    newArr[e] = cb(array[e]);
   }
 
-  return temp;
+  return newArr;
+
+   
 }
 
 function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
-  let temp = [];
+  newArr = [];
 
-  for(let i = 0;i<array.length;i++)
+  for(let words in array)
   {
-      
-      if(array[i].charAt(0)==="a")
-          temp.push(array[i]);
+    if(array[words].charAt(0)=="a")
+    {
+      newArr.push(array[words]);
+    }
   }
-  return temp;
+
+  return newArr;
 
 }
 
